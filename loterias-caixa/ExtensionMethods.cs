@@ -1,9 +1,7 @@
 ﻿using Mono.Web;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
-using System.Data;
 using System.IO;
 using System.Text;
 
@@ -12,16 +10,16 @@ namespace loterias_caixa
     public enum TipoJogo
     {
         MEGA_SENA = 0,
-        LotoFacil = 1,
-        Quina = 2,
-        LotoMania = 3,
-        TimeMania = 4,
+        LOTOFACIL = 1,
+        QUINA = 2,
+        LOTOMANIA = 3,
+        TIMEMANIA = 4,
         DuplaSena = 5,
         Federal = 6,
         Loteca = 7,
         LotoGol = 8,
-        DiaSorte = 9,
-        SuperSete = 10
+        DIA_DE_SORTE = 9,
+        SUPER_SETE = 10
     }
 
     public static class ExtensionMethods
@@ -93,14 +91,14 @@ namespace loterias_caixa
             return value.ToString("yyyyMMddHHmmssffff");
         }
 
-        public static int Acertos(this Models.MegaSena mega, List<int> jogo)
+        public static int Acertos(this Models.Sorteio sorteio, List<int> jogo)
         {
             var acertos = 0;
 
             try
             {
                 foreach (var n in jogo)
-                    acertos += mega.DezenasSorteadas.Contains(n) ? 1 : 0;
+                    acertos += sorteio.DezenasSorteadas.Contains(n) ? 1 : 0;
             }
             catch (Exception ex)
             {

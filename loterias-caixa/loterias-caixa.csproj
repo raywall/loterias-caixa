@@ -52,14 +52,20 @@
   <ItemGroup>
     <Compile Include="ExtensionMethods.cs" />
     <Compile Include="Loterias.cs" />
-    <Compile Include="Models\MegaSena.cs" />
+    <Compile Include="Models\Sorteio.cs" />
     <Compile Include="Models\Faixa.cs" />
     <Compile Include="Models\MunicipioGanhador.cs" />
     <Compile Include="RequisicaoHttp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="loterias-caixa.nuspec">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pack\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

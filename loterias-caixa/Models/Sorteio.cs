@@ -7,7 +7,7 @@ namespace loterias_caixa.Models
 {
     [Serializable]
     [JsonObject]
-    public class MegaSena
+    public class Sorteio
     {
         [JsonProperty("tipoJogo")]
         public TipoJogo Jogo { get; set; }

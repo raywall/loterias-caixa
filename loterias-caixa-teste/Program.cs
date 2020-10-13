@@ -26,6 +26,9 @@ namespace loterias_caixa_teste
             var lotomania = caixaClient.Lotomania();
             var timemania = caixaClient.Timemania();
             var duplasena = caixaClient.DuplaSena();
+            var federal = caixaClient.LoteriaFederal();
+            var loteca = caixaClient.Loteca();
+            var lotogol = caixaClient.Lotogol();
             var diasorte = caixaClient.DiaDeSorte();
             var supersete = caixaClient.SuperSete();
 

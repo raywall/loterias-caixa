@@ -16,7 +16,7 @@ namespace loterias_caixa
         TIMEMANIA = 4,
         DUPLA_SENA = 5,
         LOTERIA_FEDERAL = 6,
-        Loteca = 7,
+        LOTECA = 7,
         LotoGol = 8,
         DIA_DE_SORTE = 9,
         SUPER_SETE = 10

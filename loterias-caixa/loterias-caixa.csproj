@@ -55,10 +55,13 @@
     <Compile Include="Models\DiaSorte.cs" />
     <Compile Include="Models\DuplaSena.cs" />
     <Compile Include="Models\Federal.cs" />
+    <Compile Include="Models\Loteca.cs" />
     <Compile Include="Models\Lotofacil.cs" />
+    <Compile Include="Models\Lotogol.cs" />
     <Compile Include="Models\Lotomania.cs" />
     <Compile Include="Models\MegaSena.cs" />
     <Compile Include="Models\Quina.cs" />
+    <Compile Include="Models\EquipeEsportiva.cs" />
     <Compile Include="Models\Sorteio.cs" />
     <Compile Include="Models\Faixa.cs" />
     <Compile Include="Models\MunicipioGanhador.cs" />

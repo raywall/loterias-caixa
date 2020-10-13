@@ -106,33 +106,6 @@ namespace loterias_caixa
             return null;
         }
 
-        public Federal LoteriaFederal(int concurso = 0)
-        {
-            var resultado = new Federal();
-            var pagina = string.Empty;
-
-            var c = concurso == 0
-                ? string.Empty
-                : $"/p=concurso={concurso}";
-
-            try
-            {
-                pagina = client.CarregarHtml($"{BaseURL}/wps/portal/loterias/landing/federal/");
-                pagina = client.CarregarHtml($"{BaseURL}/wps/portal/loterias/landing/federal/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOLNDH0MPAzcDbz8vTxNDRy9_Y2NQ13CDA0MzIAKIoEKnN0dPUzMfQwMDEwsjAw8XZw8XMwtfQ0MPM2I02-AAzgaENIfrh-FqsQ9wBmoxN_FydLAGAgNTKEK8DkRrACPGwpyQyMMMj0VAYe29yM!/dl5/d5/L2dBISEvZ0FBIS9nQSEh/pw/Z7_HGK818G0K0L710QUKB6OH80004/res/id=buscaResultado/c=cacheLevelPage/{0}?timestampAjax={DateTime.Now.TimeStamp()}");
-
-                if (string.IsNullOrEmpty(pagina))
-                    return null;
-
-                return JsonConvert.DeserializeObject<Federal>(pagina, new JsonSerializerSettings { DateFormatString = "dd/MM/yyyy" });
-            }
-            catch (Exception ex)
-            {
-                OnError?.Invoke(ex);
-            }
-
-            return null;
-        }
-
         public Lotomania Lotomania(int concurso = 0)
         {
             var resultado = new Lotomania();
@@ -205,6 +178,87 @@ namespace loterias_caixa
                     return null;
 
                 return JsonConvert.DeserializeObject<DuplaSena>(pagina, new JsonSerializerSettings { DateFormatString = "dd/MM/yyyy" });
+            }
+            catch (Exception ex)
+            {
+                OnError?.Invoke(ex);
+            }
+
+            return null;
+        }
+
+        public Federal LoteriaFederal(int concurso = 0)
+        {
+            var resultado = new Federal();
+            var pagina = string.Empty;
+
+            var c = concurso == 0
+                ? string.Empty
+                : $"/p=concurso={concurso}";
+
+            try
+            {
+                pagina = client.CarregarHtml($"{BaseURL}/wps/portal/loterias/landing/federal/");
+                pagina = client.CarregarHtml($"{BaseURL}/wps/portal/loterias/landing/federal/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOLNDH0MPAzcDbz8vTxNDRy9_Y2NQ13CDA0MzIAKIoEKnN0dPUzMfQwMDEwsjAw8XZw8XMwtfQ0MPM2I02-AAzgaENIfrh-FqsQ9wBmoxN_FydLAGAgNTKEK8DkRrACPGwpyQyMMMj0VAYe29yM!/dl5/d5/L2dBISEvZ0FBIS9nQSEh/pw/Z7_HGK818G0K0L710QUKB6OH80004/res/id=buscaResultado/c=cacheLevelPage/{0}?timestampAjax={DateTime.Now.TimeStamp()}");
+
+                if (string.IsNullOrEmpty(pagina))
+                    return null;
+
+                return JsonConvert.DeserializeObject<Federal>(pagina, new JsonSerializerSettings { DateFormatString = "dd/MM/yyyy" });
+            }
+            catch (Exception ex)
+            {
+                OnError?.Invoke(ex);
+            }
+
+            return null;
+        }
+
+        public Loteca Loteca(int concurso = 0)
+        {
+            var resultado = new Loteca();
+            var pagina = string.Empty;
+
+            var c = concurso == 0
+                ? string.Empty
+                : $"/p=concurso={concurso}";
+
+            try
+            {
+                pagina = client.CarregarHtml($"{BaseURL}/wps/portal/loterias/landing/loteca/");
+                pagina = client.CarregarHtml($"{BaseURL}/wps/portal/loterias/landing/loteca/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOLNDH0MPAzcDbz8vTxNDRy9_Y2NQ13CDA3cDYEKIoEKnN0dPUzMfQwMDEwsjAw8XZw8XMwtfQ0MPM2I02-AAzgaENIfrh-FqsQ9wBmoxN_FydLAGAgNTKEK8DkRrACPGwpyQyMMMj0VAbNnwlU!/dl5/d5/L2dBISEvZ0FBIS9nQSEh/pw/Z7_HGK818G0KOCO10AFFGUTGU0004/res/id=buscaResultado/c=cacheLevelPage/{c}?timestampAjax={DateTime.Now.TimeStamp()}");
+
+                if (string.IsNullOrEmpty(pagina))
+                    return null;
+
+                return JsonConvert.DeserializeObject<Loteca>(pagina, new JsonSerializerSettings { DateFormatString = "dd/MM/yyyy" });
+            }
+            catch (Exception ex)
+            {
+                OnError?.Invoke(ex);
+            }
+
+            return null;
+        }
+
+        public Lotogol Lotogol(int concurso = 0)
+        {
+            var resultado = new Lotogol();
+            var pagina = string.Empty;
+
+            var c = concurso == 0
+                ? string.Empty
+                : $"/p=concurso={concurso}";
+
+            try
+            {
+                pagina = client.CarregarHtml($"{BaseURL}/wps/portal/loterias/landing/lotogol/");
+                pagina = client.CarregarHtml($"{BaseURL}/wps/portal/loterias/landing/lotogol/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOLNDH0MPAzcDbwMPI0sDBxNXAOMwrzCjE18zYAKIoEKnN0dPUzMfQwMDEwsjAw8XZw8XMwtfQ0MPM2I02-AAzgaENIfrh-FqsQ9wNnUwNHfxcnSwBgIDUyhCvA5EawAjxsKckMjDDI9FQFTuNFd/dl5/d5/L2dBISEvZ0FBIS9nQSEh/pw/Z7_HGK818G0KGBQD0ARPT1QLG1041/res/id=buscaResultado/c=cacheLevelPage/{c}?timestampAjax={DateTime.Now.TimeStamp()}");
+
+                if (string.IsNullOrEmpty(pagina))
+                    return null;
+
+                return JsonConvert.DeserializeObject<Lotogol>(pagina, new JsonSerializerSettings { DateFormatString = "dd/MM/yyyy" });
             }
             catch (Exception ex)
             {

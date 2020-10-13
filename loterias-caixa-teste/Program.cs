@@ -20,13 +20,14 @@ namespace loterias_caixa_teste
                 Console.WriteLine($"Error: {ex.Message}");
             });
 
-            var mega = caixaClient.Consulta(TipoJogo.MEGA_SENA);
-            var lotofacil = caixaClient.Consulta(TipoJogo.LOTOFACIL);
-            var quina = caixaClient.Consulta(TipoJogo.QUINA);
-            var lotomania = caixaClient.Consulta(TipoJogo.LOTOMANIA);
-            var timemania = caixaClient.Consulta(TipoJogo.TIMEMANIA);
-            var diasorte = caixaClient.Consulta(TipoJogo.DIA_DE_SORTE);
-            var supersete = caixaClient.Consulta(TipoJogo.SUPER_SETE);
+            var mega = caixaClient.Megasena();
+            var lotofacil = caixaClient.Lotofacil();
+            var quina = caixaClient.Quina();
+            var lotomania = caixaClient.Lotomania();
+            var timemania = caixaClient.Timemania();
+            var duplasena = caixaClient.DuplaSena();
+            var diasorte = caixaClient.DiaDeSorte();
+            var supersete = caixaClient.SuperSete();
 
             Console.WriteLine($"Resultado MegaSena {mega.Concurso}: {string.Join(", ", mega.DezenasOrdemCrescente.ToArray())}");
             Console.WriteLine();

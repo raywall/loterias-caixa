@@ -14,7 +14,13 @@ namespace loterias_caixa.Models
         [JsonProperty("municipio")]
         public string Municipio { get; set; }
 
+        [JsonProperty("nomeFatansiaUL")]
+        public string PontoVenda { get; set; }
+
         [JsonProperty("uf")]
         public string UF { get; set; }
+
+        [JsonProperty("serie")]
+        public string Serie { get; set; }
     }
 }

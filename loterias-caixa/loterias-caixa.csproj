@@ -52,9 +52,18 @@
   <ItemGroup>
     <Compile Include="ExtensionMethods.cs" />
     <Compile Include="Loterias.cs" />
+    <Compile Include="Models\DiaSorte.cs" />
+    <Compile Include="Models\DuplaSena.cs" />
+    <Compile Include="Models\Federal.cs" />
+    <Compile Include="Models\Lotofacil.cs" />
+    <Compile Include="Models\Lotomania.cs" />
+    <Compile Include="Models\MegaSena.cs" />
+    <Compile Include="Models\Quina.cs" />
     <Compile Include="Models\Sorteio.cs" />
     <Compile Include="Models\Faixa.cs" />
     <Compile Include="Models\MunicipioGanhador.cs" />
+    <Compile Include="Models\SuperSete.cs" />
+    <Compile Include="Models\Timemania.cs" />
     <Compile Include="RequisicaoHttp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

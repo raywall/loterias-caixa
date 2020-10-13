@@ -6,8 +6,7 @@
     <authors>Raywall Malheiros</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
-    <projectUrl>https://github.com/raywall/local-nuget-package/blob/master/local-nuget-package/images/pack.jpg</projectUrl>
-    <iconUrl>https://github.com/raywall/local-nuget-package/blob/master/local-nuget-package/images/pack.jpg</iconUrl>
+    <projectUrl>https://github.com/raywall/loterias-caixa</projectUrl>
     <description>Consulta resultados das principais loterias da Caixa Econônica Federal</description>
     <releaseNotes>Consulta aos jogos da MegaSena, LotoFacil, Quina, Lotomania, Timemania, Dia de Sorte e Super Sete</releaseNotes>
     <copyright>Copyright 2020</copyright>
